@@ -64,8 +64,6 @@ function randNote(){
     accIndex = Math.floor(Math.random() * accChoice.length);
     newKey = keyChoice[keyIndex];
     newAcc = accChoice[accIndex];
-    // alert(newKey);
-    // alert(newAcc);
 
     if(newAcc != 'natural'){
 
@@ -121,18 +119,6 @@ function randNote(){
 
     fileName = 'audio/' + answerList[0][0] + answerList[0][1] + '.mp3';
     playAudio(fileName);
-    // alert(fileName);
-
-    // if(answerList.length == 1){
-    //     alert(answerList[0][0]);
-    //     alert(answerList[0][1]);
-    // }
-    // else{
-    //     alert(answerList[0][0]);
-    //     alert(answerList[0][1]);        
-        // alert(answerList[1][0]);
-        // alert(answerList[1][1]);
-    // }
 }
 
 function highlightNote(note){
@@ -195,10 +181,6 @@ function enterClick(){
     userGuess.push(stringNote);
     userGuess.push(stringAcc);
 
-    // alert(userGuess);
-
-    // alert(answerList[0]);
-
     if(contains(answerList, userGuess)){
         correctGuess();
     }
@@ -207,10 +189,6 @@ function enterClick(){
     }
 
     const timeOut = setTimeout(resetAnim, 1000);
-
-    // alert('recording guess:');
-    // alert(stringNote);
-    // alert(stringAcc);
 }
 
 function playClick(){
@@ -220,7 +198,7 @@ function playClick(){
 function newClick(){
     answerList = [];
     fileName ='';
+    
     resetAnim();
-
     randNote();
 }
